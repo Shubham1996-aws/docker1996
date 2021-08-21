@@ -1,4 +1,6 @@
   
-FROM tomcat:8
-LABEL app=my-app
-COPY target/*.war /usr/local/tomcat/webapps/myweb.war
+FROM ubuntu
+RUN apt-get update
+RUN apt-get install apache2 -y
+EXPOSE 80
+
